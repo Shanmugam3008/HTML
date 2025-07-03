@@ -1,0 +1,162 @@
+<!Doctype Html>
+<html>
+	<head>
+		<title>form page</title>
+		<link rel="stylesheet" href="stylesheet.css" >
+		<meta name="Description" content="learning Html from basics">
+		<meta name="keyword" content="HTML And CSS">
+		<!-- change the refresh seconds as u want
+				<meta http-equiv="refresh" content="5">
+		-->
+
+		<meta name="viewport" content="width=device-width ,initial-scale=1.0">
+	</head>
+
+	<header>
+			<h3 id="Home"> WEB DEVELOPMENT FOR FORM </h3>
+			
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About Me</a></li>
+			<li><a href="">Services</a></li>
+			<li><a href="">Contact Us</a></li>	
+		</ul>
+	</nav>
+	<hr>
+	
+	<body>
+		<form action="">
+			
+			<fieldset>
+				
+				<lable for="Fname" >First Name :</label>
+				<input id="Fname" name="Fname" type="Text" placeholder="Shanmugam" required minlength="3">
+				<br>
+				<br>
+				
+				<lable for="Lname" >Last Name :</label>
+				<input id="Lname" name="Lname" type="Text" placeholder="seker"  required>
+				<br>
+				<br>
+				
+				<lable for="email" >Email :</label>
+				<input id="email" name="email" type="email" placeholder="Trainee@gmail.com" required>
+				<br>
+				<br>
+				
+				<lable for="dob" >Date of Birth :</label>
+				<input id="dob" name="dob" type="date">
+				<br>
+				<br>
+				
+				<input name="Gender" type="radio" required value="Male">
+				<lable>Male</label>
+				<input name="Gender" type="radio" required value="Female">
+				<lable>Female</label>
+				<br>
+				<br>
+				
+				<input id="" name="IDgenereator" type="Hidden" value="101">
+				
+				<lable for="reg" >Choose a Country:</label>
+				<select id="reg" name="region" type="Text" required>
+					<option value="India">India</option>
+					<option value="China">China</option>
+					<option value="Japan">Japan</option>
+					<option value="Iraq">Iraq</option>
+					<option value="USA">USA</option>
+					<option value="UAE">UAE</option>
+				</select>
+				<br>
+				<br>
+				
+				<lable for="file" >Upload CV or Resume :</label>
+				<input id="file" name="file" type="file">
+				<br>
+				<br>
+				
+				<label>Select CGPA  : </label>
+				<input list="cgpa" name="cgpa">
+				<datalist id = "cgpa" >
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</datalist>
+				
+				<br>
+				<br>
+
+				<label for="Range">Technology knowledge : </label>
+				<input type="range" id="Range" name="Range" min="0" max="3" step="1">
+				
+				<br><br>
+				<button>Submit</button>
+				
+			</fieldset>
+		</form>
+	</body>
+	<hr>
+	
+	<footer >
+		
+		<div>Contact Us</div>
+		<form>
+		<h4>Comments :</h4>
+		<textarea rows="6" cols="50" required></textarea>
+		<br>
+		<br>
+		<button>Submit</button><br><br> 
+		</form>
+		<div>
+		
+			<form>
+			
+				<fieldset>
+					<input id="Cbo1"name="option1" type="CheckBox" value="Have Faith In You" >
+					<lable for="Cbo1"> Have Faith In You </label><br>
+					<input id="Cbo2" name="option2" type="CheckBox"  value="Have Faith In God">
+					<lablefor="Cbo2" > Have Faith In God </label><br>
+					<input id="Cbo3" name="option3" type="CheckBox" value="Have Faith In Friends">
+					<lable ffor="Cbo3" > Have Faith In Friends </label><br>
+					<button>Submit</button><br><br> 
+				</fieldset>
+				<br>
+				<br>
+				
+				<lable for="reg" >Country:</label>
+				<select id="reg" name="region" type="Text" multiple>
+					<optgroup label="Neighbour country 1">
+						<option value="India">India</option>
+						<option value="China">China</option>
+					</optgroup>
+					<optgroup label="Neighbour country 2">
+						<option value="Iraq">Iraq</option>
+						<option value="USA">USA</option>
+					</optgroup>
+					<optgroup label="Neighbour country 3">
+						<option value="Japan">Japan</option>
+						<option value="UAE">UAE</option>
+					</optgroup>
+					
+				</select>
+				
+				<br>
+				<br>
+				<button>Submit</button><br><br> 
+				
+			</form>
+			 
+		</div>
+	</footer>
+	
+</html>

@@ -1,0 +1,24 @@
+h1{
+	Background-color : Red;
+}
+
+video::cue {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to bottom, yellow, lightyellow);
+  color: red;
+}
+#list{
+	color:blue;
+}
+#list:hover{
+	Background-color : grey;
+	color: black;
+}
+
+.list1{
+	color:blue;
+}
+.list1:hover{
+	Background-color : grey;
+	color: white;
+}

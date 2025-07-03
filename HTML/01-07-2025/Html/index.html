@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Learning</title>
+    <!-- style embeding -->
+    <link rel="stylesheet" href="..\Css\stylesheet.css">
+    <!-- script embeding -->
+    <script src="..\Js\index.js"></script>
+</head>
+
+<body>
+    <br>
+    <div id="iframe">
+        <h4 id="ifram">Embedding external pages or content using iframe tag</h4>
+        <br>
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    </div>
+
+    <div id="embed">
+        <h4 id="embed">Embedding external pages or content Using Embed tag</h4>
+        <br>
+        <embed src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </div>
+
+    <div id="obj">
+        <h4 id="object">Embedding external pages or content Using object tag</h4>
+        <br>
+        <object data="https://www.youtube.com/embed/tgbNymZ7vqY"></object>
+    </div>
+    <br><br>
+
+
+    <div>
+        <h4>Drawing with canvas</h4>
+        <canvas class="canva" width="250px" height="250px" style="border: 1px solid black; background-color: aqua;"></canvas>
+    </div>
+    <br><br>
+
+    <div>
+        <h4>SVG scalable vector graphics</h4>
+        <svg  width="100px" height="100px">
+            <rect width="100%" height="100%" fill="#a2a8d3"/>
+            <circle cx="50" cy="50" r="40" fill="gray"/>
+            <text x="50" y="60" font-size="30" text-anchor="middle" fill="white">SAN</text>
+        </svg>
+    </div>
+
+    <div id="scrip"></div>
+    <button onclick="AddText()"> ADD</button>
+
+</body>
+
+</html>

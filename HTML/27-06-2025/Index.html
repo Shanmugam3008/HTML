@@ -1,0 +1,94 @@
+<!Doctype Html>
+<html>
+
+	<head>
+		<title>Home page</title>
+		<link rel="stylesheet" href="stylesheet.css" >
+		<meta name="Description" content="learning Html from basics">
+		<meta name="keyword" content="HTML And CSS">
+		<!-- change the refresh seconds as u want -->
+		<meta http-equiv="refresh" content="5">
+		<meta name="viewport" content="width=device-width ,initial-scale=1.0">
+		<script>
+			function drager(ev) {
+			  ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function DragAndDropMiddle(ev) {
+			  ev.preventDefault();
+			}
+
+			function droper(ev) {
+			  ev.preventDefault();
+			  const data = ev.dataTransfer.getData("text");
+			  ev.target.appendChild(document.getElementById(data));
+			}
+		</script>
+	</head>
+
+	<header>
+			<h3 id="Home">WEB DEVELOPMENT</h3>
+			
+	</header>
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About Me</a></li>
+			<li><a href="">Services</a></li>
+			<li><a href="">Contact Us</a></li>	
+		</ul>
+	</nav>
+	<hr>
+	<body>
+		<section tabindex="1";>
+			<h4 >ID</h4>
+			<h5>list</h5>
+			<ul id="list">
+				<li>sample 1</li>
+				<li>sample 2</li>
+				<li>sample 3</li>
+			</ul>
+			<h5>Class</h5>
+			<ul class="list1">
+				<li>sample 1</li>
+				<li>sample 2</li>
+				<li>sample 3</li>
+			</ul>
+			<ul class="list1">
+				<li>sample 1</li>
+				<li>sample 2</li>
+				<li>sample 3</li>
+			</ul>
+		</section >
+		<section tabindex="2"; title="Tooltip eample">
+			<P style="background-color: lightgreen;padding: 5px 5px ;"><b>Learning</b> is the process of acquiring new understanding, knowledge, behaviors, skills, values, attitudes, and preferences.The ability to learn is possessed by humans, non-human animals, and some machines; there is also evidence for some kind of learning in certain plants. Some learning is immediate, induced by a single event (e.g. being burned by a hot stove), but much skill and knowledge accumulate from repeated experiences. The changes induced by learning often last a lifetime, and it is hard to distinguish learned material that seems to be "lost" from that which cannot be retrieved.</p>
+			<br>
+			<p id ="Home1" contenteditable="true"> On this area you can edit the content</p>
+			<script>
+				window.onload = function forfocus(){
+					document.getElementById("Home1").focus();
+				}
+			</script>		
+		</section>
+		
+		<section tabindex="3";>
+		
+			<div id="empspace" ondrop="droper(event)" ondragover=" DragAndDropMiddle(event)" style="border: 1px solid black;height:250px;width:300px;" title="To store the image">
+				<img id="img" draggable="true" ondragstart="drager(event)" src="vinland.jpeg" type="image/JPEG" style="height:250px;width:300px;">
+			</div>
+			<div id="emp" ondrop="droper(event)" ondragover=" DragAndDropMiddle(event)" style="border: 1px solid black;height:250px;width:300px;" title="To store the image"></div>
+			
+		</section>
+	</body>
+	<hr>
+	<footer>
+		<script>
+			window.onload = function forfocu(){
+				document.getElementById("CO").style.visibility="hidden";
+			}
+		</script>
+		<div id="CO">Contact Us</div>
+		<div>Contact Us</div>
+	</footer>
+	
+</html>
