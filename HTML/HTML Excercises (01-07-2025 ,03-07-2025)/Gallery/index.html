@@ -8,6 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="origin">
     <link rel="stylesheet" href="styleshet.css" />
+    <script>
+        // pages/api/hello.js
+          export default function handler(req, res) {
+          res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+          res.status(200).json({ message: 'Hello from API!' });
+        }
+    </script>
     <title>ONE PIECE</title>
   </head>
 <q><i></i></q>
