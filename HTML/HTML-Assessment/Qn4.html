@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Html Assessment Qn4</title>
+</head>  
+<body>
+	
+	<h1>Form</h1>
+
+	<form>
+	
+		<fieldset>
+			<br>
+			<label for="Country" >User's Country : </label>
+			<input type="text" id="Country" name="country" placeholder="India" readonly value="India" required><br><br>
+			
+			<label for="numbers"> Accept Numbers : </label>
+			<input type="number" id="numbers" name="number" min="0" step=5  required><br><br>
+			
+			<label for="Vehicle">choose the vehicle : </label>
+			<select name="vehicle" id="Vehicle" required> 
+				<optgroup label="Airvehicle" >
+					<option value="Areoplane" >Areoplane</option>
+					<option value="Helicopter" >Helicopter</option>
+					
+				</optgroup>
+				<optgroup label="Landvechicle">
+					<option value="Bike"> Bike</option>
+					<option value="Car">Car</option>
+				</optgroup>
+			</select><br><br>
+					
+			<label for="language">Enter programming language :  </label>
+			<input type="text" list="program" name="program_language" required autocomplete>
+			<datalist type="text" id="program">
+				<option value="Html">Html</option>
+				<option value="Css">Css</option>
+				<option value="Javascript">Javascript</option>
+				<option value="Python">Python</option>
+			</datalist><br><br>
+			
+			<label for="Password">Password : </label >
+			<input type="password" id="Password" name="password" required minlength=8 maxlength=30 ><br><br>
+			
+			<h4>Select the programming language : </h4>
+			
+			<input id="Html" name="ProLang" type="checkbox" checked value="html">
+			<label for="Html"> HTML </label><br>
+			<input id="css" name="ProLang" type="checkbox" value="css">
+			<label for="css"> CSS </label><br>
+			<input id="js" name="ProLang" type="checkbox" value="js">
+			<label for="js"> JS </label><br>
+			<input id="java" name="ProLang" type="checkbox" value="java">
+			<label for="java"> Java </label><br><br>
+
+			
+			<input type="submit">
+			
+		</fieldset>
+	</form>
+</body>
+</html>
