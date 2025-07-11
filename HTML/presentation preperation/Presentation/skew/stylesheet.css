@@ -1,0 +1,37 @@
+#skew {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(45deg, red, blue);
+  perspective: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#innerbox1,
+#innerbox2,
+#innerbox3,
+#innerbox4 {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(45deg, red, yellow);
+  margin: 5px;
+}
+
+#innerbox1:hover {
+  /* transform: skew(20deg); */
+  transform: skew(20deg, 0);
+}
+#innerbox2:hover {
+  transform: skew(-20deg, 0);
+}
+#innerbox3:hover {
+  transform: skew(0, 20deg);
+}
+#innerbox4:hover {
+  transform: skew(0, -20deg);
+}

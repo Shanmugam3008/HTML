@@ -1,0 +1,46 @@
+
+
+
+#scale {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(45deg, red, blue);
+  perspective: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 50px;
+}
+
+#innerbox2{
+   width: 100px;
+  height: 100px;
+  background-image: linear-gradient(45deg, pink, blue);
+  margin: 5px;
+}
+
+#innerbox1,
+#innerbox3,
+#innerbox4 {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(45deg, red, yellow);
+  margin: 5px;
+}
+
+#innerbox1:hover {
+    scale: 1.5;
+}
+#innerbox2:hover {
+   transform:  scaleX(1.5);
+}
+#innerbox3:hover {
+   transform:  scaleY(1.5);
+}
+#innerbox4:hover {
+  transform:  scale3d(1.5, 1.5, 3);
+}
