@@ -1,0 +1,121 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  flex-direction: column;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  /* border: 8px solid white;
+    border-top: 8px solid blue; */
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: circle 2s linear infinite;
+}
+
+h2{
+    color: white;
+}
+.outer {
+  width: 200px;
+  height: 5px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.inner{
+    height: 100%;
+    background-color: aqua;
+    animation: load 3s linear infinite;
+}
+
+@keyframes load {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dot{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot div{
+    margin: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: beige;
+    border-radius: 50%;
+    color: aliceblue;
+}
+
+.dot div:nth-child(1){
+     animation: load1 1.5s linear infinite ;
+}
+.dot div:nth-child(2){
+     animation: load2 1.5s linear infinite ;
+}
+.dot div:nth-child(3){
+     animation: load3 1.5s linear infinite ;
+}
+
+@keyframes load1 {
+    0%{
+        
+        transform: translateY(0) ;
+    }
+    25%{
+        transform: translateY(-10px) ;
+
+    }
+}
+@keyframes load2 {
+    0%{
+        transform: translateY(0) ;
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes load3 {
+    0%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(-10px);
+    }
+}
+
+div.rotate{
+    margin: 5px;
+    width: 18px;
+    height: 20px;
+    color: white;
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}

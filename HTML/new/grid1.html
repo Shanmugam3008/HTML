@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid3.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Toggle Sidebar</title>
+    <link rel="stylesheet" href="grid2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+        Header
+      </div>
+
+      <div class="sidebar" id="sidebar">
+        <!-- sample sidebar content -->
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+        <div>sample</div>
+      </div>
+
+      <div class="main">
+        <p>Main content goes here.</p>
+        <div style="height: 1000px;"></div>
+      </div>
+    </div>
+
+    <div class="footer">Footer</div>
+
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
+
+</body>
+</html>
