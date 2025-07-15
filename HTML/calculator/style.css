@@ -1,0 +1,80 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: black ;
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: repeat(5,1fr);
+     position: relative; 
+
+}
+.calculator div{ 
+    border: 1px solid black;
+    border-radius: 5px; 
+    background-color: gray ;
+    color: white;
+    font-size: xx-large;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+   
+}
+.dis{
+    width:90%;
+    height:70%;
+    grid-column: 1/-1;
+}
+.num{
+    width:50%;
+    height:40%;
+}
+/* .back{
+    width: 400px;
+    height: 500px ;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background: linear-gradient(to top right,#8a2be2,red,blue,yellow);
+} */
+ @property --ang{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+ }
+.calculator::after,.calculator::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--ang),#8a2be2,red,blue,yellow);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 5px;
+    padding: 10px;
+    animation: spin  2s linear  infinite  ;
+}
+.calculator::before{
+    filter: blur(1.5rem);
+}
+@keyframes spin {
+    0%{
+        --ang:0deg;
+    }
+    100%{
+        --ang: 360deg;
+    }
+}
