@@ -1,0 +1,100 @@
+/* :root {
+  --head: gray;
+  --aside: blue;
+  --main: lightblue;
+  --foot: rgb(212, 10, 128);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas:
+    "h h "
+    "a m "
+    "f f";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto minmax(0,1fr) auto;
+}
+
+header {
+  grid-area: h;
+  min-height: 50px;
+  background-color: var(--head);
+  position: sticky;
+  top: 0;
+}
+aside {
+  height: calc(100vh - 50px);
+  grid-area: a;
+  background-color: var(--aside);
+  position: sticky;
+  top: 50px;
+  overflow-y: auto ;
+}
+
+main {
+  grid-area: m;
+  background-color: var(--main);
+  min-height: calc(100vh - 100px);
+}
+footer {
+  grid-area: f;
+  min-height: 50px;
+  background-color: var(--foot);
+} */
+:root {
+    --head: gray;
+    --aside: blue;
+    --main: lightblue;
+    --foot: rgb(212, 10, 128);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+        "h h"
+        "a m"
+        "f f";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    grid-area: h;
+    min-height: 50px;
+    background-color: var(--head);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+aside {
+    grid-area: a;
+    background-color: var(--aside);
+    position: sticky;
+    top: 50px; /* Same as header height */
+    height: calc(100vh - 50px); /* Viewport height minus header */
+    align-self: start; /* Important for grid items */
+    overflow-y: auto;
+}
+
+main {
+    grid-area: m;
+    background-color: var(--main);
+    min-height: calc(100vh - 100px); /* Adjust based on header+footer */
+}
+
+footer {
+    grid-area: f;
+    min-height: 50px;
+    background-color: var(--foot);
+}

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --head: blue;
+  --aside: white;
+  --nav: lightblue;
+  --main: white;
+  --foot: blue;
+  --font-color-header-footer: white;
+  --font-color-aside-main: black;
+}
+body {
+      background-color: rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 2em minmax(100px, 0.2fr) minmax(550px, 1fr) 2em;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "h h h h"
+    "n n n n"
+    "a a m m"
+    "f f f f";
+}
+
+header {
+  grid-area: h;
+  padding: 5px;
+  color: var(--font-color-header-footer);
+  background-color: var(--head);
+  padding: 5px;
+  margin: 5px;
+}
+
+nav {
+  grid-area: n;
+  background-color: var(--nav);
+  color: var(--font-color-header-footer);
+  padding: 5px;
+  margin: 5px;
+}
+
+aside {
+  grid-area: a;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--font-color-aside-main);
+}
+
+main {
+  grid-area: m;
+  background-color: var(--main);
+  color: var(--font-color-header-footer);
+}
+
+footer {
+  grid-area: f;
+  background-color: var(--foot);
+  color: var(--font-color-header-footer);
+}
+
+.content {
+  min-height: 100px;
+  margin: 5px;
+  padding: 5px;
+  background-color: blueviolet;
+}
+
+li {
+  min-height: 30px;
+  padding: 5px;
+  margin: 5px;
+  background-color: yellowgreen;
+}
+
+header {
+  position: sticky;
+  top: 5px;
+}
+aside {
+  position: sticky;
+  top: 40px;
+  margin-left: 4px;
+  height: calc(100vh - 40px);
+  align-self: start;
+  overflow-y: auto;
+}
+
+footer {
+  z-index: 1000;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "h h h "
+      "n n n "
+      "m m m "
+      "f f f ";
+  }
+  aside {
+    display: none;
+  }
+}
